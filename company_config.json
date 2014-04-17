@@ -1,0 +1,33 @@
+{
+    "CA": {
+        "url": "http://www.airchinacargo.com/search_order.php",
+        "method": "post",
+        "requestHeader": {
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+            "Accept-Language": "zh-CN,zh;q=0.8"
+        },
+        "Cookie": "",
+        "Referer": "",
+        "formdata": "orders10=999&orders0=$hawbcode$&orders11=999&orders1=请输入8位数字&orders12=999&orders2=请输入8位数字&orders13=999&orders3=请输入8位数字&section=0-0001-0003-0081"
+    },
+    "CI": {
+        "url": "https://cargo.china-airlines.com/CCNet/pgFreightStatus/cgoTrack.aspx",
+        "method": "post",
+        "requestHeader": {
+            "Accept": "*/*",
+            "User-Agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.154 Safari/537.36",
+            "X-MicrosoftAjax": "Delta=true"
+        },
+        "Cookie": "",
+        "Referer": "",
+        "formdata": "ScriptManager1=ScriptManager1|btnQuery&__EVENTTARGET=&__EVENTARGUMENT=&__VIEWSTATE=/wEPDwUKMTY2MDI5MzU5MQ9kFgICAw9kFggCAg8PFgQeCkZ1bmNfVGl0bGVlHhBGdW5jX0Rlc2NyaXB0aW9uZWQWCgIBDw8WAh4EVGV4dGVkZAIDDw8WAh8CZGRkAgYPDxYCHwJlFggeC29ubW91c2Vtb3ZlBVl2YXIgZHZIaW50PWRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdkdkhpbnQnKTsgZHZIaW50LmlubmVySFRNTD0nJztTaG93SGludChldmVudCxkdkhpbnQpOx4Kb25tb3VzZW91dAWJAXZhciBkdkhpbnQ9ZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2R2SGludCcpOyBkdkhpbnQuc3R5bGUuZGlzcGxheT0nbm9uZSc7IHRoaXMuY2xhc3NOYW1lPXRoaXMuY2xhc3NOYW1lLnJlcGxhY2UoLyBpbmZvdGl0bGVob3Zlci9nLCAnJyk7HgdvbmNsaWNrBWNqYXZhc2NyaXB0OlRpdGxlT25DbGljaygnJywnL1BYMDQwMjIvUmN2T25DYWxsRGF0YS5hc3B4P29uY2FsbF9mdW5jX3RpdGxlPSZub21lbnU9WSZub3RpdGxlbWVudT1ZJykeC29ubW91c2VvdmVyBSR0aGlzLmNsYXNzTmFtZSArPSAnIGluZm90aXRsZWhvdmVyJztkAgoPDxYCHwIFBy9DQ05ldC9kZAIMD2QWAmYPZBYEAgMPDxYCHwIFEDE1QXByIDAyOjM0OjI5eiBkZAIFDw8WAh4HVmlzaWJsZWhkZAIGDw9kFgIeB09uQ2xpY2sFO2phdmFzY3JpcHQ6IHJldHVybiBDaGVja0FXQigndHh0QVdCUHJlZml4JywndHh0QVdCTnVtYmVyJyk7ZAIHD2QWAmYPZBYKAgcPPCsADQEBEBYCAggCCRYCPCsABQEAFgIfB2c8KwAFAQAWAh8HZxYCZmZkAgsPPCsADQBkAg8PPCsADQEBEBYCAgYCBxYCPCsABQEAFgIfB2c8KwAFAQAWAh8HZxYCZmZkAhMPPCsADQEBEBYBAgkWATwrAAUBABYCHwdnFgFmZAIXDzwrAA0AZAIID2QWAmYPZBYCAgMPPCsADQBkGAcFCWd2RkFUQVdCQQ9nZAUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgEFCGJ0blF1ZXJ5BQxndkZBVkdIQUFfQU0PZ2QFD2d2RkFURU5WTERldGFpbA9nZAUFZ3ZBTVMPZ2QFCWd2RkFURlNVQQ9nZAUMZ3ZGQVRFTlZMTWF4D2dkngWKmvQSD9ztUEc3/x9UNOGHue0=&hdn_menu_head_index=&p=SEARCH&o=4&v=root&r=2&currentCalForm=dep&currentdate=2014-04-15&onload=&CCNetInfo1$txtCurrentDate=&txtAWBPrefix=297&txtAWBNumber=$hawbcode$&__ASYNCPOST=true&btnQuery.x=-1045&btnQuery.y=-195"
+    },
+    "LH": {
+        "url": "http://tracking.lhcargo.com/trackit/awb.trackit",
+        "method": "get",
+        "requestHeader": {},
+        "Cookie": "",
+        "Referer": "",
+        "formdata": "prefix=020&awb=$hawbcode$"
+    }
+}

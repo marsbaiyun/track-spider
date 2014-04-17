@@ -1,0 +1,9 @@
+<% include header.html %>
+<h1><%= title %></h1>
+<div class="container-fluid">
+    <form class="form-search" action="/track" method="post">
+        <input type="text" class="input-medium search-query" name="awbcode">
+        <button type="submit" class="btn">Search</button>
+    </form>
+</div>
+<% include footer.html %>

@@ -1,0 +1,106 @@
+<% include header.html %>
+<div class="container-fluid span10">
+    <div class="row-fluid">
+        <div class="span6">
+            <h3><%= title%></h3>
+        </div>
+        <div class="span6">
+            <h3><a class="btn pull-right" href="/">返回</a></h3>
+        </div>
+    </div>
+
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th rowspan="2">运单号</th>
+            <th rowspan="2">始发港</th>
+            <th rowspan="2">目的港</th>
+            <th rowspan="2">货物件数</th>
+            <th rowspan="2">货物重量</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><%= trackinfo.awbcode%></td>
+            <td><%= trackinfo.org%></td>
+            <td><%= trackinfo.des%></td>
+            <td><%= trackinfo.piece%></td>
+            <td><%= trackinfo.weight%></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <% if (trackinfo.route && trackinfo.route.length > 0) {%>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th rowspan="2">航班号</th>
+                <th rowspan="1">始发港</th>
+                <th rowspan="1">目的港</th>
+                <th rowspan="2">起飞时间</th>
+                <th rowspan="2">到达时间</th>
+                <th rowspan="1">货物件数</th>
+                <th rowspan="1">货物重量</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% for(var i=0;i<trackinfo.route.length;i++){ %>
+                <tr>
+                    <td><%= trackinfo.route[i].flightnum%></td>
+                    <td><%= trackinfo.route[i].dep%></td>
+                    <td><%= trackinfo.route[i].arr%></td>
+                    <td><%= trackinfo.route[i].deptime%></td>
+                    <td><%= trackinfo.route[i].arrtime%></td>
+                    <td><%= trackinfo.route[i].piece%></td>
+                    <td><%= trackinfo.route[i].weight%></td>
+                </tr>
+            <%}%>
+            </tbody>
+        </table>
+    <%}%>
+
+    <% if(trackinfo.tracktable && trackinfo.tracktable.length >0){%>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th rowspan="1">状态</th>
+                <th rowspan="2">航班</th>
+                <th rowspan="2">时间</th>
+                <th rowspan="1">地点</th>
+                <th rowspan="1">件数</th>
+                <th rowspan="1">重量</th>
+                <th rowspan="2">ULD</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% for(var i=0;i<trackinfo.tracktable.length;i++){ %>
+            <tr>
+                <td><%= trackinfo.tracktable[i].status%></td>
+                <td><%= trackinfo.tracktable[i].flightnum%></td>
+                <td><%= trackinfo.tracktable[i].tracetime%></td>
+                <td><%= trackinfo.tracktable[i].location%></td>
+                <td><%= trackinfo.tracktable[i].piece%></td>
+                <td><%= trackinfo.tracktable[i].weight%></td>
+                <td><%= trackinfo.tracktable[i].uld%></td>
+            </tr>
+            <%}%>
+            </tbody>
+        </table>
+    <%}else if (trackinfo.tracklist && trackinfo.tracklist.length > 0) {%>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th rowspan="10">状态</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% for(var i=0;i<trackinfo.tracklist.length;i++){ %>
+                <tr>
+                    <td><%= trackinfo.tracklist[i]%></td>
+                </tr>
+            <%}%>
+            </tbody>
+        </table>
+    <%}%>
+</div>
+<% include footer.html %>
